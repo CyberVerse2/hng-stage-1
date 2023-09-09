@@ -14,7 +14,7 @@ app.get('/api', (req, res) => {
   const response = {
     slack_name: slack_name,
     current_day: 'Saturday',
-    utc_time: isoString,
+    utc_time: now,
     track: track,
     github_file_url:
       'https://github.com/CyberVerse2/hng-stage-1/blob/master/index.js',
