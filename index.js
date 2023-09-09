@@ -17,7 +17,7 @@ app.get('/api', (req, res) => {
     github_repo_url: 'https://github.com/CyberVerse2/hng-stage-1',
     status_code: 200
   };
-  res.status(200).json(response);
+  res.status(200).json(JSON.stringify(response));
 });
 
 app.listen(PORT, () => console.log('Listening at port 8000'));
