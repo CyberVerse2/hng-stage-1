@@ -9,12 +9,12 @@ app.get('/api', (req, res) => {
   if (!(slack_name && track)) return res.status(400).json('Page not found');
   const now = new Date();
 
-  const isoString = now.toISOString();
+  let isoString = now.toISOString().split('.')[0].concat('Z');
 
   const response = {
-    slack_name: slack_name,
+    slack_name: 'Ejiofor Celestine',
     current_day: 'Saturday',
-    utc_time: now,
+    utc_time: isoString,
     track: track,
     github_file_url:
       'https://github.com/CyberVerse2/hng-stage-1/blob/master/index.js',
